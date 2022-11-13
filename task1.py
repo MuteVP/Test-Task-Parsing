@@ -13,7 +13,7 @@ options = Options()
 options.binary_location = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
 ua = UserAgent()
 userAgent = ua.random
-#print(f'user-agent={userAgent}')
+
 print(" Start...\n")
 options.add_argument(f'user-agent={userAgent}')
 s = Service('C:\Program Files\chromedriver.exe')
@@ -53,7 +53,7 @@ driver.find_element(By.XPATH,"//img[@title='NSE India, National Stock Exchange']
 time.sleep(3)
 graph = driver.find_element(By.XPATH, "//div[@role='tablist']")
 graph.location_once_scrolled_into_view
-#driver.execute_script("window.scrollBy(0, 400);")
+
 time.sleep(3)
 driver.find_element(By.XPATH,"//a[@id='tabList_NIFTYBANK']").click()
 time.sleep(3)
@@ -62,16 +62,12 @@ driver.execute_script("window.scrollBy(0, 100);")
 time.sleep(2)
 driver.delete_all_cookies()
 driver.find_element(By.XPATH,"//*[@id='tab4_gainers_loosers']/div[3]/a").click()
-#"//div[@class='tab-content']/div/a").click()
-#print(view_all.get_attribute("innerHTML"))
-#ActionChains(driver).move_to_element(view_all).click(view_all).perform()
+
 time.sleep(3)
-#driver.find_element(By.XPATH,"//select[@id='equitieStockSelect']").click()
-#time.sleep(3)
-#NiftyAlpha =
+
 driver.delete_all_cookies()
 driver.find_element(By.XPATH,"//option[@value='NIFTY ALPHA 50']").click()
-#driver.move_to_element()
+
 time.sleep(10)
 
 try:
