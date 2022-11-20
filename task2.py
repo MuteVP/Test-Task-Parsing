@@ -47,7 +47,6 @@ for i in range(0, 10):
                         '/photo/') == -1 and str(link).find('help.twitter') == -1 and str(link).find(
                         '/twitter.com/') != -1 and str(link).find(
                         '/t.co/') == -1 and link not in tmp:
-                    # print(link)
                     tmp.append(link)
         n += 1
     norm_links.append(tmp)
